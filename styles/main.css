@@ -1,0 +1,123 @@
+:root {
+    --red: #E50914;
+    --black: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body {
+    background: var(--black);
+    font-family: 'Montserrat', sans-serif;;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header .container .logo {
+    color: var(--red);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+
+/* Movie Principal */
+
+.main-movie {
+    font-size: 16px;
+    background: #000;
+    background-image: url("../img/capa.jpg"), linear-gradient(#121116, #0b0a0f);
+    height: 400px;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat; 
+}
+
+.main-movie .box-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+    padding: 20px;
+    height: 400px;
+    justify-content: center;
+}
+
+.main-movie .box-content h6 b{
+    color: red;
+}
+
+.main-movie .box-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: -10px;
+}
+
+.main-movie .box-content p {
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.main-movie .box-content h3 span {
+    font-family: 'Tangerine', cursive;
+    font-size: 41px;
+}
+
+.main-movie .box-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.main-movie .box-buttons button {
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+    width: 30%;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Montserrat',sans-serif;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.main-movie .box-buttons .btn-watch{
+    background: #f2f2f2;
+}
+
+.main-movie .box-buttons .btn-watch:hover{
+    background: #eeee;
+}
+
+.main-movie .box-buttons .btn-info {
+    background: #1f2024;
+    color: #fff;
+}
+
+.main-movie .box-buttons .btn-info:hover {
+    background: #2a282d;
+}
