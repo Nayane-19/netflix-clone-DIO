@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="/styles/owl/owl.theme.default.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@400;500;600&family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>Netflix-Clone</title>
+    <title>MyFlix</title>
 </head>
 <body>
     <header>
         <div class="container">
             <h2 class="logo">
-                NETFLIX
+                MyFLIX
             </h2>
             <nav>
                 <a href="#">Início</a>
@@ -23,13 +25,22 @@
                 <a href="#">Filmes</a>
                 <a href="#">Documentários</a>
             </nav>
+            <button class="menu-mobile"><i class="fas fa-bars"></i></button>
+            <div class="box-menu-mobile">
+              <ul class="mobile">
+                <li href="#">Início</li>
+                <li href="#">Séries</li>
+                <li href="#">Filmes</li>
+                <li href="#">Documentários</li>
+            </ul>
+            </div>
         </div>
     </header>
     <main>
         <div class="main-movie">
             <div class="container">
                 <div class="box-content">
-                    <h6>ORIGINAL <b>NETFLIX</b></h6>
+                    <h6>ORIGINAL <b>MyFLIX</b></h6>
                     <h3 class="title">HOUSE <img src="img/bandeira.jpg" alt="bandeira" style="width: 25px;"/> <span>of</span> CARDS</h3>
                     <p class="description">Num drama sobre as consequências do poder e da corrupção, Francis Underwood (Kevin Spacey) está sedento por sucesso e nada o detém. Trata-se de uma história onde são ultrapassados os limites para satisfazer o desejo de um homem que ambiciona governar o mundo.</p>
                     <div class="box-buttons">
@@ -40,12 +51,44 @@
             </div>
         </div>
     </main>
-    <div id="teste">
+    <section>
+        <div id="wrapper">
+            <div id="carousel">
+              <div id="content" class="box-1 movies">
+              </div>
+            </div>
+            <button id="prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+              </svg>
+            </button>
+            <button id="next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+              </svg>
+            </button>
+          </div>     
+    </section>
 
-    </div>
+   
 
     <script src="https://kit.fontawesome.com/b3271abda2.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+    
 </body>
 </html>
 
-<script src="/js/script.js"></script>
+

@@ -1,6 +1,6 @@
 :root {
     --red: #E50914;
-    --black: #141414;
+    --black: #0b0a0f;
 }
 
 *{
@@ -8,6 +8,21 @@
     padding: 0;
     box-sizing: border-box ;
 }
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(197, 94, 94);
+  }
 
 body {
     background: var(--black);
@@ -39,6 +54,61 @@ header nav a {
 header nav a:hover {
     color: #fff;
 }
+
+.menu-mobile {
+  display: none;
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+
+.box-menu-mobile{
+  background-color: var(--black);
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  height: calc(100vh - 80px);
+  z-index: 101;
+  display: none;
+  flex-direction: column;
+  left: -1024px;
+  box-shadow: 0px 3px 6px #00000099;
+  transition: all ease 0.4s;
+  align-items: center;
+
+}
+
+@media (max-width: 768px){
+
+  header nav  {
+    display: none;
+}
+  .box-menu-mobile, .menu-mobile {
+    display: flex;
+  }
+
+  .box-menu-mobile ul {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .box-menu-mobile ul li {
+    color: #fff;
+    list-style: none;
+    font-size: 20px;
+  }
+
+  .box-menu-mobile.show{
+    left: 0;
+    transition: all ease 0.4s;
+}
+
+}
+
 
 
 /* Movie Principal */
@@ -103,6 +173,7 @@ header nav a:hover {
     align-items: center;
     justify-content: center;
     gap: 7px;
+    padding: 0 10px;
 }
 
 .main-movie .box-buttons .btn-watch{
@@ -121,3 +192,77 @@ header nav a:hover {
 .main-movie .box-buttons .btn-info:hover {
     background: #2a282d;
 }
+
+@media (max-width: 540px){
+
+  .main-movie .box-content{
+    width: 100% !important;
+  }
+  
+    .box-buttons {
+      flex-direction: column;
+    }
+  
+    .main-movie .box-buttons button {
+      width: 100% !important;
+    }
+  }
+
+  @media (min-width: 541px) and (max-width: 1024px){
+    .main-movie .box-content{
+      width: 80% !important;
+    }
+  }
+  
+
+  #wrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  #content {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  
